@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const ytho = document.getElementById('ytho');
     const reveal = document.getElementById('reveal');
     const nameForm = document.getElementById('name-form');
-    const directgreet = document.getElementById('directgreet');
-    const realquestion = document.getElementById('realquestion');
+    const directGreet = document.getElementById('directgreet');
+    const realQuestion = document.getElementById('realquestion');
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
     nameForm.classList.add('hidden');
-    directgreet.classList.add('hidden');
+    directGreet.classList.add('hidden');
 
     selectForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -44,9 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const nameInput = document.getElementById("nameInput").value;
         const directParagraph = document.getElementById("directgreet");
         directParagraph.textContent = `Nice to meet you, ${nameInput}!`;
-        directgreet.classList.remove('hidden');
-        realquestion.classList.remove('hidden');
+        directGreet.classList.remove('hidden');
+        realQuestion.classList.remove('hidden');
     });
+    realquestion.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const preferA = document.getElementById('preferA').value;
+        const preferB = document.getElementById('preferB').value;
+        const nameInput = document.getElementById('nameInput').value;
+    }
 
 
 });
