@@ -3,34 +3,48 @@ document.addEventListener('DOMContentLoaded', function() {
     const radioForm = document.getElementById('radio-form');
     const ytho = document.getElementById('ytho');
     const reveal = document.getElementById('reveal');
+    const nameForm = document.getElementById('name-form');
+    const direct = document.getElementById('direct');
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
+    nameForm.classList.add('hidden');
+    direct.classList.add('hidden');
 
-        selectForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const selectedOption = interest.options[interest.selectedIndex].value;
-                if (selectedOption === 'Yes') {
-                    radioForm.classList.remove('hidden');
-                    ytho.classList.add('hidden');
-                } else {
-                    ytho.classList.remove('hidden');
-                    radioForm.classList.add('hidden');
-                }
-        radioForm.addEventListener('submit', function(event){
-            event.preventDefault();
-            const selectedPet = document.querySelector('input[name="pet"]:checked').value;
-            if (selectedPet === 'cat') {
-                reveal.classList.remove('hidden');
+    selectForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedOption = interest.options[interest.selectedIndex].value;
 
-            } else if (selectedPet === 'dog') {
-                ytho.classList.remove('hidden');
-                radioForm.classList.add('hidden');
-                reveal.classList.add('hidden');
-            }
-        })
-    
-        })
+        if (selectedOption === 'Yes') {
+            radioForm.classList.remove('hidden');
+            ytho.classList.add('hidden');
+        } else {
+            ytho.classList.remove('hidden');
+            radioForm.classList.add('hidden');
+        }
+    });
 
+    radioForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedPet = document.querySelector('input[name="pet"]:checked').value;
+
+        if (selectedPet === 'cat') {
+            reveal.classList.remove('hidden');
+            nameForm.classList.remove('hidden');
+        } else if (selectedPet === 'dog') {
+            ytho.classList.remove('hidden');
+            radioForm.classList.add('hidden');
+            reveal.classList.add('hidden');
+        }
+    });
+
+    nameForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const nameInput = document.getElementById("nameInput").value;
+        const directParagraph = document.getElementById("direct");
+        directParagraph.textContent = `Nice to meet you, ${nameInput}!`;
+        direct.classList.remove('hidden');
+    });
 });
+
 
