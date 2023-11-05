@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const ytho = document.getElementById('ytho');
     const reveal = document.getElementById('reveal');
     const nameForm = document.getElementById('name-form');
-    const direct = document.getElementById('direct');
+    const directgreet = document.getElementById('direct');
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
     nameForm.classList.add('hidden');
-    direct.classList.add('hidden');
+    directgreet.classList.add('hidden');
 
     selectForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -41,10 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     nameForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const nameInput = document.getElementById("nameInput").value;
-        const directParagraph = document.getElementById("direct");
+        const directParagraph = document.getElementById("directgreet");
         directParagraph.textContent = `Nice to meet you, ${nameInput}!`;
-        direct.classList.remove('hidden');
+        directgreet.classList.remove('hidden');
     });
+
+
 });
 
 
