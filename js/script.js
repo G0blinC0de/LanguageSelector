@@ -47,14 +47,28 @@ document.addEventListener('DOMContentLoaded', function() {
         directGreet.classList.remove('hidden');
         realQuestion.classList.remove('hidden');
     });
-    realquestion.addEventListener('submit', function(event) {
+    realQuestion.addEventListener('submit', function(event) {
         event.preventDefault();
+        document.getElementById('nameInput').value;
         const preferA = document.getElementById('preferA').value;
         const preferB = document.getElementById('preferB').value;
         const nameInput = document.getElementById('nameInput').value;
-    }
+        if (preferA === '1a' && preferB === '1b') {
+            document.getElementById('op-html').classList.remove('hidden');
+            document.getElementById('op-c#').classList.add('hidden');
+            document.getElementById('op-javas').classList.add('hidden');
+        } else if (preferA === '2a' && preferB === '2b') {
+            document.getElementById('op-html').classList.add('hidden');
+            document.getElementById('op-c#').classList.remove('hidden');
+            document.getElementById('op-javas').classList.add('hidden');
+        } else if (preferA === '3a' && preferB === '3b') {
+            document.getElementById('op-html').classList.add('hidden');
+            document.getElementById('op-c#').classList.add('hidden');
+            document.getElementById('op-javas').classList.remove('hidden');
+        }
 
+        });
+    });
 
-});
 
 
