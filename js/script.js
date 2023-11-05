@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const ytho = document.getElementById('ytho');
     const reveal = document.getElementById('reveal');
     const nameForm = document.getElementById('name-form');
-    const directgreet = document.getElementById('direct');
+    const directgreet = document.getElementById('directgreet');
+    const realquestion = document.getElementById('realquestion');
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const directParagraph = document.getElementById("directgreet");
         directParagraph.textContent = `Nice to meet you, ${nameInput}!`;
         directgreet.classList.remove('hidden');
+        realquestion.classList.remove('hidden');
     });
 
 
