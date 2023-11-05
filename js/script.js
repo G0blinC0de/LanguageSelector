@@ -53,18 +53,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const preferA = document.getElementById('preferA').value;
         const preferB = document.getElementById('preferB').value;
         const nameInput = document.getElementById('nameInput').value;
-        if (preferA === '1a' && preferB === '1b') {
-            document.getElementById('op-html').classList.remove('hidden');
-            document.getElementById('op-c#').classList.add('hidden');
-            document.getElementById('op-javas').classList.add('hidden');
-        } else if (preferA === '2a' && preferB === '2b') {
-            document.getElementById('op-html').classList.add('hidden');
-            document.getElementById('op-c#').classList.remove('hidden');
-            document.getElementById('op-javas').classList.add('hidden');
-        } else if (preferA === '3a' && preferB === '3b') {
-            document.getElementById('op-html').classList.add('hidden');
-            document.getElementById('op-c#').classList.add('hidden');
-            document.getElementById('op-javas').classList.remove('hidden');
+        if (selectedA === '1a' && selectedB === '1b') {
+        
+        } else if (selectedA === '1a' && selectedB === '2b') {
+        
+        } else if (selectedA === '1a' && selectedB === '3b') {
+        
+        } else if (selectedA === '2a' && selectedB === '1b') {
+        
+        } else if (selectedA === '2a' && selectedB === '2b') {
+        
+        } else if (selectedA === '2a' && selectedB === '3b') {
+        
+        } else if (selectedA === '3a' && selectedB === '1b') {
+        
+        } else if (selectedA === '3a' && selectedB === '2b') {
+        
+        } else if (selectedA === '3a' && selectedB === '3b') {
+        
         }
 
         });
