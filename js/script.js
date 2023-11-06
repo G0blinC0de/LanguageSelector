@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const opCSharp = document.getElementById('opCSharp');
     const opJavascript = document.getElementById('opJavas');
     const resetButton = document.getElementById('reset');
-    
+    const goodbye = document.getElementById('goodbye');
     let nameInput;
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
     nameForm.classList.add('hidden');
     directGreet.classList.add('hidden');
-    const goodbye = document.getElementById('goodbye');
+   
 
     selectForm.addEventListener('submit', function(event) {
         event.preventDefault();
