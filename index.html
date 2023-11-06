@@ -9,62 +9,60 @@
 <body>
     <div id="content">
     <h1>The Wizard Shall Assist Your Decision!</h1>
-    
         <div id="image-container">
             <img id="wizard" src="images/WizardOrb.jpg" alt="Wizard"/>
         </div>   
         <form id="select-form" class="form-box">
-        <h2>Do you want to learn to code?</h2>
-            <select id="interest">
-            <option>Yes</option>
-            <option>No</option>
-            </select>
-       
-    <button type="submit">Submit</button>
-    </form>
+            <h2>Do you want to learn to code?</h2>
+                <select id="interest">
+                <option>Yes</option>
+                <option>No</option>
+                </select>
+            <button type="submit">Submit</button>
+        </form>
 
         <p id="ytho" class="hidden">Then why are you here?</p>
 
-    <form id="radio-form" class="form-box">
-        <h2>Cats or Dogs?</h2>
-            <label>
-                <input type="radio" name="pet" value="cat">
-                Cats
-            </label><br />
-            <label>
-                <input type="radio" name="pet" value="dog">
-                Dogs
-            </label>
+        <form id="radio-form" class="form-box">
+            <h2>Cats or Dogs?</h2>
+                <label>
+                    <input type="radio" name="pet" value="cat">
+                    Cats
+                </label><br />
+                <label>
+                    <input type="radio" name="pet" value="dog">
+                    Dogs
+                </label>
             <button type="submit" id="Choose">Choose</button>
-    </form>
-    <p id="reveal" class="hidden">Nice Choice!</p>
+        </form>
+        <p id="reveal" class="hidden">Nice Choice!</p>
 
-    <form id="name-form" class="hidden">
-        <h2>What is your name, anyways?</h2>
-            <label for="nameInput">Your Name</label>
-            <input id="nameInputField" type="text" name="nameInput">
-        <button type="submit">Submit</button>
-    </form>
-    <p id="directgreet" class="hidden">Nice to meet you, <span id="nameInput">____</span></p>
+        <form id="name-form" class="hidden">
+            <h2>What is your name, anyways?</h2>
+                <label for="nameInput">Your Name</label>
+                <input id="nameInputField" type="text" name="nameInput">
+            <button type="submit">Submit</button>
+        </form>
+        <p id="directgreet" class="hidden">Nice to meet you, <span id="nameInput">____</span></p>
 
-    <form id="realquestion" class="hidden">
-        <h2>Which would you prefer?</h2>
-            <select id="preferA">
-                <option value="1a">I like to learn as I go.</option>
-                <option value="2a">Measure Twice, Cut Once.</option>
-                <option value="3a">I want to make websites for Dogs.</option>
-            </select>
+        <form id="realquestion" class="hidden">
+            <h2>Which would you prefer?</h2>
+                <select id="preferA">
+                    <option value="1a">I like to learn as I go.</option>
+                    <option value="2a">Measure Twice, Cut Once.</option>
+                    <option value="3a">I want to make websites for Dogs.</option>
+                </select>
             <h2>And which of these?</h2>
-            <select id="preferB">
-                <option value="1b">The basics</option>
-                <option value="2b">Throw me in the deep end!</option>
-                <option value="3b">I'm sure I can figure it out</option>
-            </select>
+                <select id="preferB">
+                    <option value="1b">The basics</option>
+                    <option value="2b">Throw me in the deep end!</option>
+                    <option value="3b">I'm sure I can figure it out</option>
+                </select>
             <button type="submit">Just tell me already!</button>
-    </form>
-    <p id="opHtml" class="hidden">Hey I hear ya, you should really consider HTML.</p>
-    <p id="opCSharp" class="hidden">Interesting, you should look into C#!</p>
-    <p id="opJavas" class="hidden">That's so cool, have you considered javascript?</p>
+        </form>
+        <p id="opHtml" class="hidden">Hey I hear ya, you should really consider HTML.</p>
+        <p id="opCSharp" class="hidden">Interesting, you should look into C#!</p>
+        <p id="opJavas" class="hidden">That's so cool, have you considered javascript?</p>
     
     <div id="goodbye" class="hidden">
         <p>Thanks for your time!</p>
