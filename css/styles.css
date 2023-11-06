@@ -11,14 +11,23 @@
     margin-top: 10px; 
 }
 
+#select-form button {
+    display: block;
+    margin-top: 20px;
 
+}
 
 #realquestion button {
     display: block;
-    margin-top: 10px; 
+    margin-top: 20px; 
 }
 
 #reset button {
     display: block;
     margin-top: 20px;
+}
+
+#wizard {
+    width: 50vw;
+    height: auto;
 }
