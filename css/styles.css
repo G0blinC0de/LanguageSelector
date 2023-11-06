@@ -2,14 +2,15 @@
     display: none;
 }
 
-.body {
-    display: block;
+#content {
+    display: inline-block;
 }
 
 form {
     border: 2px solid blue;
     padding: 10px;
     margin: 10px 0;
+    margin-left: 20px;
 }
 
 p {

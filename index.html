@@ -8,9 +8,11 @@
 
 <body>
     <h1>The Wizard Shall Assist Your Decision!</h1>
-    <img id="wizard" src="images/WizardOrb.jpg" alt="Wizard"/>
-  
-    <form id="select-form">
+    <div id="content">
+        <div id="image-container">
+            <img id="wizard" src="images/WizardOrb.jpg" alt="Wizard"/>
+        </div>   
+        <form id="select-form" class="form-box">
         <h2>Do you want to learn to code?</h2>
             <select id="interest">
             <option>Yes</option>
@@ -22,7 +24,7 @@
 
         <p id="ytho" class="hidden">Then why are you here?</p>
 
-    <form id="radio-form">
+    <form id="radio-form" class="form-box">
         <h2>Cats or Dogs?</h2>
             <label>
                 <input type="radio" name="pet" value="cat">
@@ -67,5 +69,7 @@
         <p>Thanks for your time!</p>
         <button id="reset" type="button">Reset</button>
     </div>
+    </div>
+
 </body>
 </html> 
