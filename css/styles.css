@@ -1,3 +1,24 @@
 .hidden {
     display: none;
 }
+
+.body {
+    display: block;
+}
+
+#name-form button {
+    display: block;
+    margin-top: 10px; 
+}
+
+
+
+#realquestion button {
+    display: block;
+    margin-top: 10px; 
+}
+
+#reset button {
+    display: block;
+    margin-top: 20px;
+}

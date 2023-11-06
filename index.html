@@ -37,7 +37,7 @@
     <form id="name-form" class="hidden">
         <h1>What is your name, anyways?</h1>
             <label for="nameInput">Your Name</label>
-            <input id="nameInput" type="text" name="nameInput">
+            <input id="nameInputField" type="text" name="nameInput">
         <button type="submit">Submit</button>
     </form>
     <p id="directgreet" class="hidden">Nice to meet you, <span id="nameInput">____</span></p>
@@ -55,10 +55,15 @@
                 <option value="2b">Throw me in the deep end!</option>
                 <option value="3b">I'm sure I can figure it out</option>
             </select>
-            <button type="submit>">Just tell me already!</button>
+            <button type="submit">Just tell me already!</button>
     </form>
-    <p id="op-html" class="hidden">Hey I hear ya, <span id="nameInputSpan">____</span> you should really consider HTML.</p>
-    <p id="op-c#" class="hidden">Interesting, <span id="nameInputSpan">____</span>you should look into C#!</p>
-    <p id="op-javas" class="hidden">That's so cool, <span id="nameInputSpan">____</span>have you considered javascript?</p>
+    <p id="opHtml" class="hidden">Hey I hear ya, you should really consider HTML.</p>
+    <p id="opCSharp" class="hidden">Interesting, you should look into C#!</p>
+    <p id="opJavas" class="hidden">That's so cool, have you considered javascript?</p>
+    
+    <div id="goodbye" class="hidden">
+        <p>Thanks for your time!</p>
+        <button id="reset" type="button">Reset</button>
+    </div>
 </body>
 </html> 
