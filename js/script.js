@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
             radioForm.classList.add('hidden');
             reveal.classList.add('hidden');
             nameForm.classList.add('hidden');
+            realQuestion.classList.add('hidden');
+            directGreet.classList.add('hidden');
+            opCSharp.classList.add('hidden');
+            opHtml.classList.add('hidden');
+            opJavascript.classList.add('hidden');
         }
     });
 
