@@ -19,7 +19,7 @@ A website for helping to decide on a Programming Language to Learn
 ## Setup/Installation Requirements
 
 * _Navigate to URL_
-* _URL HERE_
+* _https://g0blinc0de.github.io/LanguageSelector/_
 
 
 
