@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ytho.classList.remove('hidden');
             radioForm.classList.add('hidden');
             reveal.classList.add('hidden');
+            nameForm.classList.add('hidden');
         }
     });
 
