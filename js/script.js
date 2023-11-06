@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedA = preferA.options[preferA.selectedIndex].value;
         const selectedB = preferB.options[preferB.selectedIndex].value;
 
+
 //hides or shows correct paragraph based on choice
         if (selectedA === '1a' && selectedB === '1b') {
             opHtml.classList.remove('hidden');
