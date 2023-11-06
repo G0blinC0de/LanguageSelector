@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const opCSharp = document.getElementById('opCSharp');
     const opJavascript = document.getElementById('opJavas');
     const resetButton = document.getElementById('reset');
+    
     let nameInput;
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
     nameForm.classList.add('hidden');
     directGreet.classList.add('hidden');
+    const goodbye = document.getElementById('goodbye');
 
     selectForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -60,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const selectedA = preferA.options[preferA.selectedIndex].value;
         const selectedB = preferB.options[preferB.selectedIndex].value;
-        resetButton.classList.remove('hidden');
 
 //hides or shows correct paragraph based on choice
         if (selectedA === '1a' && selectedB === '1b') {
@@ -100,6 +101,11 @@ document.addEventListener('DOMContentLoaded', function() {
             opCSharp.classList.add('hidden');
             opJavascript.classList.add('hidden');
         }
-
+        goodbye.classList.remove('hidden');
+        resetButton.addEventListener('click', function() {
+                window.location.reload();
+        });
+    
     });
+
 });
