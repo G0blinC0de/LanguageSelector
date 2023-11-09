@@ -32,4 +32,4 @@ A website for helping to decide on a Programming Language to Learn
 
 
 
-GNU v3 (c)  _10/20/23_ _G0blinC0de_
+[GNU v3](LICENSE) (c) _10/20/23_ _G0blinC0de_
