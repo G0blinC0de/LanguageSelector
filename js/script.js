@@ -14,13 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const opJavascript = document.getElementById('opJavas');
     const resetButton = document.getElementById('reset');
     const goodbye = document.getElementById('goodbye');
+    const pleaseSelect = document.getElementById('pleaseSelect');
     let nameInput;
 
     radioForm.classList.add('hidden');
     reveal.classList.add('hidden');
     nameForm.classList.add('hidden');
     directGreet.classList.add('hidden');
-   
+    
+    window.addEventListener('load', function() {
+        radioForm.reset();
+        nameForm.reset();
+        realQuestion.reset();
+    });
 
     selectForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -32,28 +38,28 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             ytho.classList.remove('hidden');
             radioForm.classList.add('hidden');
-        }
-    });
-
-    radioForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const selectedPet = document.querySelector('input[name="pet"]:checked').value;
-//selected favorite pet controls progression
-        if (selectedPet === 'cat') {
-            reveal.classList.remove('hidden');
-            nameForm.classList.remove('hidden');
-        } else if (selectedPet === 'dog') {
-            ytho.classList.remove('hidden');
-            radioForm.classList.add('hidden');
-            reveal.classList.add('hidden');
             nameForm.classList.add('hidden');
             realQuestion.classList.add('hidden');
-            directGreet.classList.add('hidden');
-            opCSharp.classList.add('hidden');
-            opHtml.classList.add('hidden');
-            opJavascript.classList.add('hidden');
+            reveal.classList.add('hidden');
         }
     });
+//selected favorite pet controls progression
+    radioForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const catSelected = document.querySelector('input[name="pet"][value="cat"]').checked;
+        const dogSelected = document.querySelector('input[name="pet"][value="dog"]').checked;
+
+        if (catSelected || dogSelected) {
+            pleaseSelect.classList.add('hidden'); // Hide "Please select a pet"
+            reveal.classList.remove('hidden');    // Show "Nice Choice!"
+            nameForm.classList.remove('hidden');   // Show the next form
+            nameForm.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            pleaseSelect.classList.remove('hidden');  // Show "Please select a pet"
+            reveal.classList.add('hidden');           // Hide "Nice Choice!"
+            nameForm.classList.add('hidden');         // Hide the next form
+        }
+        });
 
     nameForm.addEventListener('submit', function(event) {
         event.preventDefault();
