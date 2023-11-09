@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const selectForm = document.getElementById('select-form');
     const radioForm = document.getElementById('radio-form');
     const ytho = document.getElementById('ytho');
@@ -21,17 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
     reveal.classList.add('hidden');
     nameForm.classList.add('hidden');
     directGreet.classList.add('hidden');
-    
-    window.addEventListener('load', function() {
+
+    window.addEventListener('load', function () {
         radioForm.reset();
         nameForm.reset();
         realQuestion.reset();
     });
 
-    selectForm.addEventListener('submit', function(event) {
+    selectForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const selectedOption = interest.options[interest.selectedIndex].value;
-//gated entry to determine interest
+        //gated entry to determine interest
         if (selectedOption === 'Yes') {
             radioForm.classList.remove('hidden');
             ytho.classList.add('hidden');
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             reveal.classList.add('hidden');
         }
     });
-//selected favorite pet controls progression
-    radioForm.addEventListener('submit', function(event) {
+    //selected favorite pet controls progression
+    radioForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const catSelected = document.querySelector('input[name="pet"][value="cat"]').checked;
         const dogSelected = document.querySelector('input[name="pet"][value="dog"]').checked;
@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
             reveal.classList.add('hidden');           // Hide "Nice Choice!"
             nameForm.classList.add('hidden');         // Hide the next form
         }
-        });
+    });
 
-    nameForm.addEventListener('submit', function(event) {
+    nameForm.addEventListener('submit', function (event) {
         event.preventDefault();
         nameInput = document.getElementById("nameInputField").value;
         const directParagraph = document.getElementById("directgreet");
@@ -70,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
         realQuestion.classList.remove('hidden');
     });
 
-    realQuestion.addEventListener('submit', function(event) {
+    realQuestion.addEventListener('submit', function (event) {
         event.preventDefault();
         const selectedA = preferA.options[preferA.selectedIndex].value;
         const selectedB = preferB.options[preferB.selectedIndex].value;
 
 
-//hides or shows correct paragraph based on choice
+        //hides or shows correct paragraph based on choice
         if (selectedA === '1a' && selectedB === '1b') {
             opHtml.classList.remove('hidden');
             opCSharp.classList.add('hidden');
@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', function() {
             opJavascript.classList.add('hidden');
         }
         goodbye.classList.remove('hidden');
-        resetButton.addEventListener('click', function() {
-                window.location.reload();
+        resetButton.addEventListener('click', function () {
+            window.location.reload();
         });
-    
+
     });
 
 });
