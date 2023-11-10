@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         directParagraph.textContent = `Nice to meet you, ${nameInput}!`;
         directGreet.classList.remove('hidden');
         realQuestion.classList.remove('hidden');
+        realQuestion.scrollIntoView({ behavior: 'smooth' });
     });
 
     realQuestion.addEventListener('submit', function (event) {
@@ -114,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             opCSharp.classList.add('hidden');
             opJavascript.classList.add('hidden');
         }
+
         goodbye.classList.remove('hidden');
         resetButton.addEventListener('click', function () {
             window.location.reload();
