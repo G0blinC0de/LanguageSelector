@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             pleaseSelect.classList.remove('hidden');  // Show "Please select a pet"
             reveal.classList.add('hidden');           // Hide "Nice Choice!"
-            nameForm.classList.add('hidden');         // Hide the next form
+            nameForm.classList.add('hidden');
+            nameForm.scrollIntoView({ behavior: 'smooth' });         // Hide the next form
         }
     });
 
